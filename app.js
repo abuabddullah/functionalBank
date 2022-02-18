@@ -33,9 +33,7 @@ function getAllFields(btnTagId, inputTagid, spanTagId, span4BalanceTagId, isWith
         let inputFieldAmount = getInputValue(inputTagid);
 
         if (inputTagid != 'balance-total') {
-            if (inputFieldAmount < 0) {
-                inputFieldAmount = 0;
-            } else {
+            if (inputFieldAmount > 0) {
                 if (isWithdraw == true) {
                     let AmmountInSpanField = udateValue(spanTagId, inputFieldAmount);
                     udateValue(span4BalanceTagId, -inputFieldAmount);
